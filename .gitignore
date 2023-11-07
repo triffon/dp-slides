@@ -1,0 +1,6 @@
+auto/
+out/
+*~
+.*
+!.latexmkrc
+~.gitignore

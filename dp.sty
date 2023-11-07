@@ -1,0 +1,176 @@
+%%% стандартни пакети
+
+% поддръжка на български език
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,bulgarian]{babel}
+\deftranslation[to=bulgarian]{Theorem}{Теорема}
+\deftranslation[to=bulgarian]{Definition}{Дефиниция}
+\deftranslation[to=bulgarian]{Corollary}{Следствие}
+\newtheorem{purpose}{Предназначение}
+
+% избягване на предупреждения за неподдържани символи от hyperref
+\hypersetup{unicode=true}
+
+% поддръжка на линкове
+\usepackage{hyperref}
+
+% използване на специални апострофи и кавички
+\usepackage{textcomp}
+
+% форматиране на код: общи настройки
+\usepackage{listings}
+\lstset{
+  showstringspaces=false,
+  columns=fullflexible,
+  keepspaces=true,
+  extendedchars=false,
+  keywordstyle=\color{blue},
+  texcl=true,
+  basicstyle=\ttfamily,
+  escapechar=@
+}
+
+%%% декларативна графика
+\usepackage{tikz}
+
+% стилове за стрелки, например Stealth
+\usetikzlibrary{arrows.meta}
+
+% геометрични фигури
+\usetikzlibrary{shapes.geometric}
+
+% нужно за ключа cross out за задраскване
+\usetikzlibrary{shapes.misc}
+
+% матрици
+\usetikzlibrary{matrix}
+
+% релативно позициониране
+\usetikzlibrary{positioning}
+
+% поддръжка на beamer overlays
+\usetikzlibrary{overlay-beamer-styles}
+
+% графи за вериги от оценки
+\usetikzlibrary{graphs}
+
+% зачертан текст
+\usepackage{soul}
+
+% коментари
+\usepackage{comment}
+
+% цветни таблици
+\usepackage{colortbl}
+
+% вертикално сливане на клетки
+\usepackage{multirow}
+
+% умни интервали
+\usepackage{xspace}
+
+% вертикално подравняване на \includegraphics
+\usepackage[export]{adjustbox}
+
+\usepackage[type={CC}, modifier={by-nc-sa}, version={4.0}, imagemodifier={-eu}]{doclicense}
+
+%%% настройки общи за всички слайдове
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}
+  \usecolortheme{dolphin}
+}
+\institute[ООШД 23/24]{\small Обектно-ориентирани шаблони за дизайн, 2023/24 г.}
+\titlegraphic{\vspace{8ex}\scalebox{.45}{\textcolor{gray}{Тази презентация е достъпна под лиценза Creative Commons Признание-Некомерсиално-Споделяне на споделеното 4.0 Международен \doclicenseIcon}}}
+\subject{LectureSlides}
+
+%%% команди за съкращение
+
+\newcommand{\comps}{\textbf{Компоненти}}
+
+%%% кратки команди за форматиране
+
+% код
+\renewcommand{\tt}{\texttt}
+
+% код с форматиране
+\newcommand{\lst}{\lstinline}
+
+% код в червено
+\newcommand{\tta}[1]{\tt{\alert{#1}}}
+
+% зачертан код в червено
+\newcommand{\sta}[1]{\tta{\st{#1}}}
+
+%%% други макроси и дефиниции
+
+% син цвят по подразбиране
+\colorlet{diagramblue}{blue!60!green!40}
+
+% creative commons признание
+\newcommand{\imageUntitledAttr}[4][.4]{\scalebox{#1}{\textcolor{lightgray}{От #2 (\url{#3}), #4}}}
+\newcommand{\imageAttr}[5][.4]{\scalebox{#1}{\textcolor{lightgray}{``#2'' от #3 (\url{#4}), #5}}}
+\newcommand{\imageBased}[5][.4]{\scalebox{#1}{\textcolor{lightgray}{Базирано на ``#2'' от #3 (\url{#4}), #5}}}
+
+\usepackage{anyfontsize}
+\usepackage{copyrightbox}
+\makeatletter
+\renewcommand{\CRB@setcopyrightfont}{%
+  \fontseries{m}\fontshape{it}\fontsize{3}{3}\selectfont
+  \color{gray!40}
+}
+\makeatother
+
+\newcommand{\imageWithAttrX}[8]{\copyrightbox[b]{\href{#7}{\hspace{#2}\includegraphics[width=#3]{#4}\hspace{#2}}}{#1``\href{#7}{#5}'' от #6, #8}}
+\newcommand{\imageWithAttr}[1][0pt]{\imageWithAttrX{}{#1}}
+\newcommand{\basedOnImageWithAttr}[1][0pt]{\imageWithAttrX{Базирано на }{#1}}
+\newcommand{\untitledImageWithAttr}[6][0pt]{\copyrightbox[b]{\href{#5}{\hspace{#1}\includegraphics[width=#2]{#3}\hspace{#1}}}{От \href{#5}{#4}, #6}}
+
+\newcommand{\CCBY}[1]{\href{https://creativecommons.org/licenses/by/#1/}{CC~BY~#1}}
+\newcommand{\CCBYSA}[1]{\href{https://creativecommons.org/licenses/by-sa/#1/}{CC~BY~SA-#1}}
+\newcommand{\CCBYNC}[1]{\href{https://creativecommons.org/licenses/by-nc/#1/}{CC~BY-NC~#1}}
+\newcommand{\CCBYNCSA}[1]{\href{https://creativecommons.org/licenses/by-nc-sa/#1/}{CC~BY-NC~SA-#1}}
+\newcommand{\CCBYNCND}[1]{\href{https://creativecommons.org/licenses/by-nc-nd/#1/}{CC~BY-NC-ND~#1}}
+\newcommand{\PDWC}[1]{Обществено достояние чрез Общомедия}
+\newcommand{\CCZWC}[1]{\href{https://creativecommons.org/publicdomain/zero/1.0/}{CC0} чрез Общомедия}
+
+% съкратена команда за показване само на текущия слайд
+% слага се в преамбюла
+\newcommand{\crronly}{\includeonlyframes{current}}
+
+% смаляване на шрифта в листинг
+\newcommand{\lstsize}[1]{\lstset{basicstyle=#1\ttfamily}}
+\newcommand{\lstsmall}{\lstsize\small}
+\newcommand{\lstscriptsize}{\lstsize\scriptsize}
+\newcommand{\lstfootnotesize}{\lstsize\footnotesize}
+\newcommand{\lsttiny}{\lstsize\tiny}
+
+% едновременно смаляване на обикновения шрифт и на този в lstlisting
+\newcommand{\sizeboth}[1]{#1\lstsize{#1}}
+
+%%% съкращения на символи
+
+% еквивалентно на
+\newcommand{\eqv}{$\Longleftrightarrow$\xspace}
+
+% обикновени кавички
+\newcommand{\quot}{\textquotedbl}
+
+% стрелка надолу за вериги от оценки
+\newcommand{\bda}{\big\downarrow}
+
+% стрелка нагоре за вериги от среди
+\newcommand{\bua}{\big\uparrow}
+
+%%% среди
+
+% листинг в таблица
+% https://tex.stackexchange.com/a/392601
+\lstnewenvironment{tabularlstlisting}[1][]{}{}
+
+% overlayarea, която по подразбиране изпълва цялата област за текст за текущата тема
+% може да се зададе като опционален параметър друга част от височината
+\newenvironment{fixedarea}[1][.85]{%
+  \begin{overlayarea}\textwidth{#1\textheight}}{%
+  \end{overlayarea}}
