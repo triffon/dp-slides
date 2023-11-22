@@ -4,7 +4,7 @@
 
 \title{Структурни шаблони -- част 2}
 
-\date{7 ноември 2023 г.}
+\date{21 ноември 2023 г.}
 
 \hypersetup{colorlinks,urlcolor=blue,linkcolor=white}
 
@@ -20,6 +20,18 @@
   \begin{purpose}
     Управление на голямо количество малки обекти чрез споделяне
   \end{purpose}
+
+  \pause
+  \vspace{2ex}
+  \comps
+  \begin{itemize}[<+->]
+  \item вътрешно и външно състояние
+  \item абстракция \tt{Flyweight}
+  \item споделени (shared) и неизменими (immutable) миниобекти
+  \item несподелени (unshared) миниобекти
+  \item фабрика за миниобекти
+  \item ползвател (клиент) на миниобекти
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -28,6 +40,16 @@
   \begin{purpose}
     Отделяне на йерархия от абстракции от йерархия от имплементации
   \end{purpose}
+
+  \pause
+  \vspace{2ex}
+  \comps
+  \begin{itemize}[<+->]
+  \item абстракция за абстракция
+  \item конкретизирана абстракция
+  \item абстракция за реализация
+  \item конкретна реализация
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -36,6 +58,16 @@
   \begin{purpose}
     Гъвкаво управление на сложни зависимости между обекти
   \end{purpose}
+
+  \pause
+  \vspace{2ex}
+  \comps
+  \begin{itemize}[<+->]
+  \item услуга (Service)
+  \item ползвател (Client)
+  \item интерфейс
+  \item инжектор (Injector)
+  \end{itemize}
 \end{frame}
 
 \end{document}

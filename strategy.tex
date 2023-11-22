@@ -1,0 +1,35 @@
+\PassOptionsToClass{aspectratio=169}{beamer}
+\documentclass[alsotrans]{beamerswitch}
+\usepackage{dp}
+
+\title{Стратегия (Strategy)}
+
+\date{28 ноември 2023 г.}
+
+\hypersetup{colorlinks,urlcolor=blue,linkcolor=white}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Стратегия (Strategy)}
+  
+  \begin{purpose}
+    Абстрахиране на използван алгоритъм
+  \end{purpose}
+
+  \pause
+  \vspace{2ex}
+  \comps
+  \begin{itemize}[<+->]
+  \item интерфейс (Strategy)
+  \item конкретни стратегии
+  \item контекст, в който се използва стратегията (Context)
+  \item клиент на стратегията (Client)
+  \end{itemize}
+\end{frame}
+
+\end{document}
