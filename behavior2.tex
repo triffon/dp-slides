@@ -1,0 +1,54 @@
+\PassOptionsToClass{aspectratio=169}{beamer}
+\documentclass[alsotrans]{beamerswitch}
+\usepackage{dp}
+
+\title{Поведенчески  шаблони -- част 2}
+
+\date{5 декември 2023 г.}
+
+\hypersetup{colorlinks,urlcolor=blue,linkcolor=white}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Команда (Command)}
+
+  \begin{purpose}
+    Капсулиране на действие като обект
+  \end{purpose}
+
+  \pause
+  \vspace{2ex}
+  \comps
+  \begin{itemize}[<+->]
+  \item абстрактна команда
+  \item конкретна команда
+  \item клиент
+  \item изпълнител (invoker)
+  \item получател (receiver)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Медиатор (Mediator)}
+
+  \begin{purpose}
+    Конфигурируема връзка между обекти
+  \end{purpose}
+
+  \pause
+  \vspace{2ex}
+  \comps
+  \begin{itemize}[<+->]
+  \item абстрактен медиатор
+  \item конкретен медиатор
+  \item абстрактен колега
+  \item конкретни колеги
+  \end{itemize}
+\end{frame}
+
+\end{document}
