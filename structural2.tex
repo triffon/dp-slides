@@ -4,7 +4,7 @@
 
 \title{Структурни шаблони -- част 2}
 
-\date{21 ноември 2023 г.}
+\date{19 ноември 2024 г.}
 
 \hypersetup{colorlinks,urlcolor=blue,linkcolor=white}
 
@@ -12,6 +12,26 @@
 
 \begin{frame}
   \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Композиция (Composite)}
+
+  \begin{purpose}
+    Унифицирана работа с атомарни и съставни обекти\\
+    \pause или още: представяне на хетерогенно кореново дърво
+  \end{purpose}
+
+  \pause
+  \vspace{2ex}
+
+  \comps
+  \begin{itemize}[<+->]
+  \item елемент / възел (абстрактен интерфейс)
+  \item атом / листо
+  \item съставен обект / възел с деца
+  \item клиент
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
